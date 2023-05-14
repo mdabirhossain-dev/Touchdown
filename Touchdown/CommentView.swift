@@ -19,6 +19,7 @@ struct CommentView: View {
 }
 
 // MARK: - PREVIEW
+
 struct CommentView_Previews: PreviewProvider {
     static var previews: some View {
         CommentView()
