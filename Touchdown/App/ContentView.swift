@@ -27,8 +27,9 @@ struct ContentView: View {
                 ScrollView(.vertical, showsIndicators: false, content:  {
                     VStack(spacing: 0) {
                         FeaturedTabView()
-                            .frame(height: UIScreen.main.bounds.width / 1.475)
-                            .padding(.vertical, 20)
+                            .frame(height: UIScreen.main.bounds.width / 1.475) // Shrink issue solution
+//                            .frame(minHeight: 256) // Shrink issue solution
+                            .padding(.vertical, 10)
                         
                         FooterView()
                             .padding(.horizontal)
