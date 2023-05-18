@@ -27,9 +27,22 @@ struct ContentView: View {
                 ScrollView(.vertical, showsIndicators: false, content:  {
                     VStack(spacing: 0) {
                         FeaturedTabView()
-                            .frame(height: UIScreen.main.bounds.width / 1.475) // Shrink issue solution
+                            .frame(height: UIScreen.main.bounds.width / 1.475)
+                        
+                        CategoryGridView()
+                        
+                        // Shrink issue solution
 //                            .frame(minHeight: 256) // Shrink issue solution
                             .padding(.vertical, 10)
+                        
+                        TitleView(title: "Helmets")
+                        
+                        LazyVGrid(columns: gridLayout, spacing: 15, content: {
+                            ForEach(products) { product in
+                                ProductItemView(product: product)
+                            } //: LOOP
+                        }) //: GRID
+                        .padding(15)
                         
                         FooterView()
                             .padding(.horizontal)
