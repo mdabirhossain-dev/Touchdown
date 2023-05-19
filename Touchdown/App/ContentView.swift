@@ -44,6 +44,10 @@ struct ContentView: View {
                         }) //: GRID
                         .padding(15)
                         
+                        TitleView(title: "Helmets")
+                        
+                        BrandGridView()
+                        
                         FooterView()
                             .padding(.horizontal)
                     } //: VSTACK
